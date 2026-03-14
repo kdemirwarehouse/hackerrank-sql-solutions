@@ -8,10 +8,17 @@ Author: Kadir Demir
 # ---------------------------------------------------------
 # PROBLEM 1: Revising the Select Query I
 # ---------------------------------------------------------
-
-
 SELECT * 
 FROM CITY
 WHERE COUNTRYCODE = 'USA'
 AND POPULATION > 100000;
+
+# ---------------------------------------------------------
+# PROBLEM 2: Revising the Select Query II
+# ---------------------------------------------------------
+SELECT (NAME)
+FROM CITY
+WHERE COUNTRYCODE = 'USA'
+AND 
+POPULATION > 120000
 
