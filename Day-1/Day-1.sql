@@ -16,9 +16,15 @@ AND POPULATION > 100000;
 # ---------------------------------------------------------
 # PROBLEM 2: Revising the Select Query II
 # ---------------------------------------------------------
-SELECT (NAME)
+SELECT NAME
 FROM CITY
 WHERE COUNTRYCODE = 'USA'
 AND 
-POPULATION > 120000
+POPULATION > 120000;
+
+# ---------------------------------------------------------
+# PROBLEM 3: Select All
+# ---------------------------------------------------------
+SELECT * FROM CITY;
+
 
