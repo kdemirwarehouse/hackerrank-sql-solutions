@@ -34,4 +34,11 @@ SELECT *
 FROM CITY
 WHERE ID = 1661;
 
+# ---------------------------------------------------------
+# PROBLEM 5: Japanese Cities' Attributes
+# ---------------------------------------------------------
+SELECT *
+FROM CITY
+WHERE COUNTRYCODE = 'JPN';
+
 
