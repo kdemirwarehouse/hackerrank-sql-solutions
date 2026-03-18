@@ -16,9 +16,29 @@ AND POPULATION > 100000;
 # ---------------------------------------------------------
 # PROBLEM 2: Revising the Select Query II
 # ---------------------------------------------------------
-SELECT (NAME)
+SELECT NAME
 FROM CITY
 WHERE COUNTRYCODE = 'USA'
 AND 
-POPULATION > 120000
+POPULATION > 120000;
+
+# ---------------------------------------------------------
+# PROBLEM 3: Select All
+# ---------------------------------------------------------
+SELECT * FROM CITY;
+
+# ---------------------------------------------------------
+# PROBLEM 4: Basic Select
+# ---------------------------------------------------------
+SELECT *
+FROM CITY
+WHERE ID = 1661;
+
+# ---------------------------------------------------------
+# PROBLEM 5: Japanese Cities' Attributes
+# ---------------------------------------------------------
+SELECT *
+FROM CITY
+WHERE COUNTRYCODE = 'JPN';
+
 
