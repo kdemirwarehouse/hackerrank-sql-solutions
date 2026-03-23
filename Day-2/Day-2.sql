@@ -16,3 +16,12 @@ WHERE COUNTRYCODE = 'JPN';
 # ---------------------------------------------------------
 SELECT CITY, STATE
 FROM STATION;
+
+# ---------------------------------------------------------
+# PROBLEM 2: Weather Observation Station 3
+# ---------------------------------------------------------
+SELECT DISTINCT CITY
+FROM STATION
+WHERE ID%2 = 0;
+
+
