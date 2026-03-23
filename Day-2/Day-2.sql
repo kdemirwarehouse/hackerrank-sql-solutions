@@ -10,3 +10,9 @@ Author: Kadir Demir
 SELECT NAME
 FROM CITY
 WHERE COUNTRYCODE = 'JPN';
+
+# ---------------------------------------------------------
+# PROBLEM 2: Weather Observation Station 1
+# ---------------------------------------------------------
+SELECT CITY, STATE
+FROM STATION;
