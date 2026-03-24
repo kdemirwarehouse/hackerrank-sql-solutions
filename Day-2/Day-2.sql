@@ -24,4 +24,13 @@ SELECT DISTINCT CITY
 FROM STATION
 WHERE ID%2 = 0;
 
+# ---------------------------------------------------------
+# PROBLEM 3: Weather Observation Station 4
+# ---------------------------------------------------------
+SELECT 
+COUNT(CITY) - 
+COUNT(distinct CITY)
+FROM STATION;
+
+
 
