@@ -18,14 +18,14 @@ SELECT CITY, STATE
 FROM STATION;
 
 # ---------------------------------------------------------
-# PROBLEM 2: Weather Observation Station 3
+# PROBLEM 3: Weather Observation Station 3
 # ---------------------------------------------------------
 SELECT DISTINCT CITY
 FROM STATION
 WHERE ID%2 = 0;
 
 # ---------------------------------------------------------
-# PROBLEM 3: Weather Observation Station 4
+# PROBLEM 4: Weather Observation Station 4
 # ---------------------------------------------------------
 SELECT 
 COUNT(CITY) - 
