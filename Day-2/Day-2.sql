@@ -10,3 +10,41 @@ Author: Kadir Demir
 SELECT NAME
 FROM CITY
 WHERE COUNTRYCODE = 'JPN';
+
+# ---------------------------------------------------------
+# PROBLEM 2: Weather Observation Station 1
+# ---------------------------------------------------------
+SELECT CITY, STATE
+FROM STATION;
+
+# ---------------------------------------------------------
+# PROBLEM 3: Weather Observation Station 3
+# ---------------------------------------------------------
+SELECT DISTINCT CITY
+FROM STATION
+WHERE ID%2 = 0;
+
+# ---------------------------------------------------------
+# PROBLEM 4: Weather Observation Station 4
+# ---------------------------------------------------------
+SELECT 
+COUNT(CITY) - 
+COUNT(distinct CITY)
+FROM STATION;
+
+# ---------------------------------------------------------
+# PROBLEM 5: Weather Observation Station 5
+# ---------------------------------------------------------
+SELECT CITY, LENGTH(CITY)
+FROM STATION
+ORDER BY LENGTH(CITY) ASC, CITY
+LIMIT 1;
+
+SELECT CITY, LENGTH(CITY)
+FROM STATION
+ORDER BY LENGTH(CITY) DESC, CITY
+LIMIT 1;
+
+
+
+
