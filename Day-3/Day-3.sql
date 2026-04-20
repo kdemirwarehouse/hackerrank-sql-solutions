@@ -24,3 +24,19 @@ WHERE CITY LIKE '%a' OR
 CITY LIKE '%e' OR CITY LIKE '%i'
 OR CITY LIKE '%o' OR CITY LIKE '%u';
 
+# ---------------------------------------------------------
+# PROBLEM 2: Weather Observation Station 8
+# ---------------------------------------------------------
+SELECT DISTINCT CITY FROM STATION
+WHERE (city LIKE 'a%' OR
+city LIKE 'e%' OR
+city LIKE 'i%' OR
+city LIKE 'o%' OR
+city LIKE 'u%')
+AND
+(city LIKE '%a' OR
+city LIKE '%e' OR
+city LIKE '%i' OR
+city LIKE '%o' OR
+city LIKE '%u')
+
