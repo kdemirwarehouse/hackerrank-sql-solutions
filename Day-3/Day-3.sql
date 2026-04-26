@@ -40,3 +40,15 @@ city LIKE '%i' OR
 city LIKE '%o' OR
 city LIKE '%u')
 
+# ---------------------------------------------------------
+# PROBLEM 3: Weather Observation Station 9
+# ---------------------------------------------------------
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY NOT LIKE 'A%' AND
+      CITY NOT LIKE 'E%' AND
+      CITY NOT LIKE 'I%' AND
+      CITY NOT LIKE 'O%' AND
+      CITY NOT LIKE 'U%';
+
+
