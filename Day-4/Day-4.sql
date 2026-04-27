@@ -1,3 +1,12 @@
+"""
+HackerRank SQL Solutions - Day 4
+Date: 2025-04-27
+Author: Kadir Demir
+"""
+
+# ---------------------------------------------------------
+# PROBLEM 1: Higher Than 75 Marks
+# ---------------------------------------------------------
 SELECT DISTINCT CITY 
 FROM STATION
 WHERE CITY NOT LIKE 'A%' AND
