@@ -36,3 +36,27 @@ FROM EMPLOYEE
 WHERE SALARY > 2000 AND
 MONTHS < 10
 ORDER BY EMPLOYEE_ID ASC;
+
+# ---------------------------------------------------------
+# PROBLEM 4: Type of Triangle
+# ---------------------------------------------------------
+SELECT
+    CASE
+        WHEN A + B <= C OR A + C <= B OR B + C <= A THEN 'Not A Triangle'
+        WHEN A = B AND B = C THEN 'Equilateral'
+        WHEN A = B OR B = C OR A = C THEN 'Isosceles'
+        ELSE 'Scalene'
+    END
+FROM TRIANGLES;
+
+# ---------------------------------------------------------
+# PROBLEM 5: The PADS
+# ---------------------------------------------------------
+SELECT CONCAT(Name, '(', LEFT(Occupation, 1), ')')
+FROM OCCUPATIONS
+ORDER BY Name;
+
+SELECT CONCAT('There are a total of', COUNT(*), ' ', LOWER(Occupation), 's.')
+FROM OCCUPATIONS
+GROUP BY Occupation
+ORDER BY COUNT(*), Occupation;
