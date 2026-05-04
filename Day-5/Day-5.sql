@@ -21,3 +21,10 @@ FROM (
 ) AS sub
 GROUP BY rn
 ORDER BY rn;
+
+# ---------------------------------------------------------
+# PROBLEM 2: Revising Aggregations - The Count Function
+# ---------------------------------------------------------
+SELECT COUNT(*) FROM CITY
+WHERE POPULATION > 100000;
+
