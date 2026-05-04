@@ -28,3 +28,9 @@ ORDER BY rn;
 SELECT COUNT(*) FROM CITY
 WHERE POPULATION > 100000;
 
+# ---------------------------------------------------------
+# PROBLEM 3: Revising Aggregations - The Sum Function
+# ---------------------------------------------------------
+SELECT SUM(POPULATION) 
+FROM CITY
+WHERE DISTRICT = 'CALIFORNIA';
