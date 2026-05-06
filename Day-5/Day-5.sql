@@ -21,3 +21,29 @@ FROM (
 ) AS sub
 GROUP BY rn
 ORDER BY rn;
+
+# ---------------------------------------------------------
+# PROBLEM 2: Revising Aggregations - The Count Function
+# ---------------------------------------------------------
+SELECT COUNT(*) FROM CITY
+WHERE POPULATION > 100000;
+
+# ---------------------------------------------------------
+# PROBLEM 3: Revising Aggregations - The Sum Function
+# ---------------------------------------------------------
+SELECT SUM(POPULATION) 
+FROM CITY
+WHERE DISTRICT = 'CALIFORNIA';
+
+# ---------------------------------------------------------
+# PROBLEM 4: Revising Aggregations - Averages
+# ---------------------------------------------------------
+SELECT AVG(POPULATION) 
+FROM CITY
+WHERE DISTRICT = 'California';
+
+# ---------------------------------------------------------
+# PROBLEM 5: Average Population
+# ---------------------------------------------------------
+SELECT FLOOR(AVG(POPULATION))
+FROM CITY;
