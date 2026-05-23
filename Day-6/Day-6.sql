@@ -22,3 +22,26 @@ WHERE COUNTRYCODE = 'JPN';
 ---------------------------------------------------------
 SELECT MAX(POPULATION) - MIN(POPULATION)
 FROM CITY;
+
+---------------------------------------------------------
+# PROBLEM 4: Binary Tree Nodes
+---------------------------------------------------------
+SELECT 
+    b1.N,
+    CASE
+        WHEN b1.P IS NULL THEN 'Root'
+        WHEN EXISTS (
+            SELECT 1
+            FROM BST b2
+            WHERE b2.P = b1.N
+        ) THEN 'Inner'
+        ELSE 'Leaf'
+    END
+FROM BST b1
+ORDER BY b1.N;
+
+---------------------------------------------------------
+# PROBLEM 5: The Blunder
+---------------------------------------------------------
+SELECT CEIL(AVG(SALARY) - AVG(REPLACE(SALARY, '0',  "")))
+FROM EMPLOYEES;
