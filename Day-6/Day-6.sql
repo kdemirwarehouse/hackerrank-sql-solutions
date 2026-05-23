@@ -40,3 +40,8 @@ SELECT
 FROM BST b1
 ORDER BY b1.N;
 
+---------------------------------------------------------
+# PROBLEM 5: Binary Tree Nodes
+---------------------------------------------------------
+SELECT CEIL(AVG(SALARY) - AVG(REPLACE(SALARY, '0',  "")))
+FROM EMPLOYEES;
