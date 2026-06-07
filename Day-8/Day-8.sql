@@ -36,3 +36,10 @@ WHERE LAT_N > 38.7780)
 SELECT ROUND(ABS(MIN(LAT_N) - MAX(LAT_N)) + ABS(MIN(LONG_W) - MAX(LONG_W)), 4)
 FROM STATION;
 
+
+# ---------------------------------------------------------
+# PROBLEM 5: Weather Observation Station 19
+# ---------------------------------------------------------
+SELECT ROUND(SQRT(POWER(MIN(LAT_N) - MAX(LAT_N), 2) +
+POWER(MIN(LONG_W) - MAX(LONG_W), 2)), 4)
+FROM STATION;
