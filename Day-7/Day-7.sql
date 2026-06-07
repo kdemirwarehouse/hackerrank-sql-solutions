@@ -33,3 +33,12 @@ JOIN Manager        m  ON sm.company_code = m.company_code
 JOIN Employee       e  ON m.company_code  = e.company_code
 GROUP BY c.company_code, c.founder
 ORDER BY c.company_code;
+
+
+# ---------------------------------------------------------
+# PROBLEM 3: Weather Observation Station 2
+# ---------------------------------------------------------
+SELECT 
+    ROUND(SUM(LAT_N), 2) AS lat,
+    ROUND(SUM(LONG_W), 2) AS lon
+FROM STATION;
