@@ -34,7 +34,7 @@ JOIN COUNTRY ON CITY.COUNTRYCODE = COUNTRY.CODE
 WHERE COUNTRY.CONTINENT = 'Africa'
 
 # ---------------------------------------------------------
-# PROBLEM 4: African Cities
+# PROBLEM 4: Average Population of Each Continent 
 # ---------------------------------------------------------
 SELECT COUNTRY.CONTINENT,
 FLOOR(AVG(CITY.POPULATION))
