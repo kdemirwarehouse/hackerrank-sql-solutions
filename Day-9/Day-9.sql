@@ -32,3 +32,12 @@ SELECT CITY.NAME
 FROM CITY
 JOIN COUNTRY ON CITY.COUNTRYCODE = COUNTRY.CODE
 WHERE COUNTRY.CONTINENT = 'Africa'
+
+# ---------------------------------------------------------
+# PROBLEM 4: African Cities
+# ---------------------------------------------------------
+SELECT COUNTRY.CONTINENT,
+FLOOR(AVG(CITY.POPULATION))
+FROM CITY
+JOIN COUNTRY ON CITY.COUNTRYCODE = COUNTRY.CODE
+GROUP BY COUNTRY.CONTINENT;
