@@ -13,3 +13,13 @@ FROM (
     FROM STATION
 ) AS ranked
 WHERE rn = (SELECT CEIL(COUNT(*) / 2) FROM STATION)
+
+
+
+# ---------------------------------------------------------
+# PROBLEM 2: Population Census
+# ---------------------------------------------------------
+SELECT SUM(CITY.POPULATION)
+FROM CITY
+JOIN COUNTRY ON CITY.COUNTRYCODE = COUNTRY.CODE
+WHERE COUNTRY.CONTINENT = 'Asia'
