@@ -38,3 +38,33 @@ AND w.coins_needed = (
 )
 ORDER BY w.power DESC, wp.age DESC;
 
+#--------------------------------------------------------
+# PROBLEM 3: Challenges
+#---------------------------------------------------------
+SELECT 
+    h.hacker_id,
+    h.name,
+    COUNT(*) AS challenges_count
+FROM HACKERS h
+JOIN CHALLENGES c ON h.hacker_id = c.hacker_id
+GROUP BY h.hacker_id, h.name
+HAVING challenges_count = (
+        SELECT MAX(cnt)
+        FROM (
+            SELECT COUNT(*) AS cnt
+            FROM CHALLENGES
+            GROUP BY hacker_id
+        ) max_counts
+    )
+    OR challenges_count NOT IN (
+        SELECT challenges_count
+        FROM (
+            SELECT COUNT(*) AS challenges_count
+            FROM CHALLENGES
+            GROUP BY hacker_id
+        ) dup_counts
+        GROUP BY challenges_count
+        HAVING COUNT(*) > 1
+    )
+ORDER BY challenges_count DESC, h.hacker_id ASC;
+
