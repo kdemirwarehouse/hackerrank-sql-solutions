@@ -68,3 +68,18 @@ HAVING challenges_count = (
     )
 ORDER BY challenges_count DESC, h.hacker_id ASC;
 
+#--------------------------------------------------------
+# PROBLEM 4: Draw The Triangle 1
+#---------------------------------------------------------
+SET @TEMP := 21;
+SELECT REPEAT('* ', @TEMP := @TEMP - 1)
+FROM INFORMATION_SCHEMA.TABLES
+LIMIT 20;
+
+#--------------------------------------------------------
+# PROBLEM 5: Draw The Triangle 2
+#---------------------------------------------------------
+SET @TEMP := 0;
+SELECT REPEAT('* ', @TEMP := @TEMP + 1)
+FROM INFORMATION_SCHEMA.TABLES
+LIMIT 20;
